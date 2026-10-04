@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+users.db
+.env
+.DS_Store
+
+data/
+
+models/*
+!models/calibrated_svm.pkl
+!models/structured_tfidf.pkl
+!models/structured_encoder.pkl
+!models/categorical_columns.pkl
+!models/binary_columns.pkl
