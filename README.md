@@ -1,45 +1,50 @@
-# 🛡️ Fake Job Posting Detection System
+# 🔍 Fake Job Posting Detection System
 
-A machine learning-based web application that detects potentially fraudulent job postings using textual information and structured job attributes.
+An end-to-end Machine Learning web application that detects whether a job posting is **Genuine or Fraudulent** using textual and structured job information.
 
-The system analyzes job postings using Natural Language Processing (NLP), TF-IDF feature extraction, structured feature encoding, and multiple machine learning algorithms. It provides a fraud prediction, calibrated fraud-risk score, risk level, prediction history, and model analytics through an interactive Streamlit dashboard.
-
----
-
-## 📌 Project Overview
-
-Fake and fraudulent job postings can mislead job seekers and may result in financial loss, identity theft, or exposure to malicious activities.
-
-The objective of this project is to develop an intelligent system that can analyze job postings and identify patterns associated with fraudulent listings.
-
-The system combines:
-
-- Textual job information
-- Categorical job attributes
-- Binary job attributes
-- TF-IDF feature extraction
-- Machine learning classification
-- Calibrated fraud-risk estimation
-- User authentication
-- Prediction history
-- Model performance analytics
+The system combines **TF-IDF text features** with structured job-posting features and uses multiple Machine Learning algorithms to identify potentially fraudulent job postings.
 
 ---
 
-## 🎯 Objectives
+## 🚀 Live Demo
 
-The main objectives of this project are:
+🌐 **Try the deployed application:**
 
-1. Analyze job postings and identify fraudulent patterns.
-2. Clean and preprocess textual job information.
-3. Extract meaningful textual features using TF-IDF.
-4. Incorporate structured job attributes into the prediction system.
-5. Train and compare multiple machine learning models.
-6. Evaluate models using multiple performance metrics.
-7. Develop a functional system for predicting unseen job postings.
-8. Provide an interpretable fraud-risk score.
-9. Store prediction history for registered users.
-10. Provide a professional dashboard for analysis and monitoring.
+https://fake-job-detection-ktu3cj79gaw5cnpwzjw8cv.streamlit.app/
+
+The application provides:
+
+- User Registration
+- Secure Login
+- Job Fraud Detection
+- Fraud Risk Score
+- Prediction History
+- Model Analytics
+- User Profile
+
+---
+
+## 📂 GitHub Repository
+
+💻 **Source Code:**
+
+https://github.com/baniyamittal/fake-job-detection
+
+---
+
+## 🎯 Project Objective
+
+Online job platforms can contain fraudulent job advertisements designed to collect personal information, money, or sensitive data from job seekers.
+
+The objective of this project is to develop a Machine Learning system that can:
+
+- Analyze job postings
+- Identify suspicious job advertisements
+- Classify jobs as Genuine or Fraudulent
+- Calculate a fraud risk score
+- Provide a user-friendly prediction interface
+- Maintain prediction history
+- Compare different Machine Learning models
 
 ---
 
@@ -50,50 +55,78 @@ The main objectives of this project are:
 - User registration
 - User login
 - Password validation
-- Session-based authentication
+- User profile
 - Logout functionality
 
-### 🔍 Fake Job Detection
+### 🕵️ Fake Job Detection
 
 Users can enter:
 
 - Job title
+- Company profile
+- Job description
+- Requirements
+- Benefits
 - Location
 - Department
 - Employment type
 - Required experience
 - Required education
 - Industry
-- Job function
-- Company profile
-- Job description
-- Requirements
-- Benefits
-- Telecommuting status
+- Function
+- Telecommuting
 - Company logo availability
-- Screening questions availability
+- Questions availability
 
-The system then predicts whether the job is:
+The system predicts:
 
-- ✅ Genuine
-- 🚨 Fraudulent
+**Genuine** or **Fraudulent**
 
 ---
 
-## 📊 Fraud Risk Score
+### ⚠️ Fraud Risk Score
 
-The application provides a calibrated fraud-risk estimate.
+The system generates a fraud probability and converts it into a risk score.
 
-Risk categories:
+Risk levels include:
 
-| Risk Score | Risk Level |
-|---|---|
-| 0% – 24.99% | Very Low Risk |
-| 25% – 49.99% | Low Risk |
-| 50% – 74.99% | Medium Risk |
-| 75% – 100% | High Risk |
+- Very Low Risk
+- Low Risk
+- Medium Risk
+- High Risk
 
-The risk score represents the model's estimated probability of fraudulent-job risk and should not be treated as absolute proof.
+This allows users to understand the severity of the prediction instead of seeing only a binary result.
+
+---
+
+### 📊 Prediction History
+
+Every prediction made by a logged-in user can be stored with:
+
+- Job title
+- Prediction result
+- Risk level
+- Fraud risk score
+- Date and time
+
+---
+
+### 📈 Model Analytics
+
+The application provides model performance information using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- ROC-AUC
+
+The system compares:
+
+- Logistic Regression
+- Naive Bayes
+- Random Forest
+- Linear SVM
 
 ---
 
@@ -102,28 +135,26 @@ The risk score represents the model's estimated probability of fraudulent-job ri
 The project follows the following pipeline:
 
 ```text
-Raw Job Dataset
+Raw Job Posting
        ↓
-Data Cleaning
+Data Preprocessing
        ↓
-Missing Value Handling
+Text Cleaning
        ↓
-Text Preprocessing
+Feature Engineering
        ↓
-TF-IDF Feature Extraction
+TF-IDF Text Features
+       +
+Structured Features
        ↓
-Structured Feature Encoding
+Train/Test Split
        ↓
-Feature Combination
-       ↓
-Train-Test Split
-       ↓
-Model Training
+Machine Learning Models
        ↓
 Model Evaluation
        ↓
 Best Model Selection
        ↓
-Calibrated Prediction
+Fraud Prediction
        ↓
-Fraud Risk Score
+Risk Score
